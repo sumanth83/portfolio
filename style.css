@@ -1,0 +1,10 @@
+
+  
+#navbar{
+  background-color:white;
+  position: fixed;
+  top:-0px;
+  width: 100%;
+  display: block;
+  transition:-top 0.3s;
+}
