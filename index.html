@@ -26,6 +26,7 @@
     </head>
 <body>
   <!-- Navbar (Sits on top) -->
+  <nav class="navigation">
 <div id="navbar" class="w3-top w3-bar w3-white w3-wide w3-padding w3-card">
   <a href="#" class="w3-bar-item w3-button w3-hover-blue"> Sum@nth</a>
   
@@ -54,7 +55,7 @@
     
 </div>
   
-  
+  </nav>
 
   <!--page start-->
           <div class="w3-conatainer">
@@ -317,7 +318,38 @@ function scrollFunction() {
   } else {
     document.getElementById("navbar").style.top = "-50px";
   }
-}                                                    
+}  
+                                                         
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".navgation .top-to-bottom", offset: 50});
+
+// Add smooth scrolling on all links inside the navbar
+$("#navbar a").on('click', function(event) {
+
+  // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 800, function(){
+
+    // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+
+  } // End if
+
+});
+
+                                                       
                                                         
 
 </script>
