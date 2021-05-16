@@ -293,35 +293,35 @@
     function clickNS(e) {
         if (document.layers || (document.getElementById && !document.all)) {
             if (e.which == 2 || e.which == 3) {
-                alert(message);
-                return false;
-            }
-        }
-    }
-    if (document.layers) {
-        document.captureEvents(Event.MOUSEDOWN);
-        document.onmousedown = clickNS;
-    }
-    else {
-        document.onmouseup = clickNS;
-        document.oncontextmenu = clickIE;
-    }
-
-    document.oncontextmenu = new Function("return false")
-                                                        
-    // When the user scrolls down 20px from the top of the document, slide down the navbar
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-50px";
-  }
-}  
+                 alert(message);
+                 return false;
+             }
+         }
+    } 
+    if ( document.layers) {
+         document.captureEvents(Event.MOUSEDOWN);
+         document.onmousedown = clickNS;
+    } 
+     else {
+         document.onmouseup = clickNS;
+         document.oncontextmenu = clickIE;
+     }
+ 
+     document.oncontextmenu = new Function("return false")
                                                          
-  // Add scrollspy to <body>
-  $('body').scrollspy({target: ".navgation .top-to-bottom", offset: 50});
+     // When the user scrolls down 20px from the top of the document, slide down the navbar
+w indow.onscroll = function() {scrollFunction()};
+ 
+function  scrollFunction() {
+  if (d ocument.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    do cument.getElementById("navbar").style.top = "0";
+  } e lse {
+     document.getElementById("navbar").style.top = "-50px";
+  } 
+}   
+                                                          
+  // Add scrollspy to <body> 
+  $('body').scrollspy({target: ".navgation", offset: 50});
 
 // Add smooth scrolling on all links inside the navbar
 $("#navbar a").on('click', function(event) {
