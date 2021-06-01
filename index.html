@@ -36,11 +36,11 @@
   
   <!-- Float links to the right. Hide them on small screens--> 
   <div class="w3-right w3-hide-small">
-  <a href="#home" class="w3-bar-item w3-button  w3-hide-small w3-hover-blue">Home</a>
-  <a href="#about" class="w3-bar-item w3-button w3-hover-blue">About</a>
-  <a href="#skill" class="w3-bar-item w3-button w3-hover-blue">Skills</a>
-  <a href="#" class="w3-bar-item w3-button w3-hover-blue">Works</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-hover-blue">Contact</a>
+  <li href="#home" class="w3-bar-item w3-button  w3-hide-small w3-hover-blue">Home</li>
+  <li href="#about" class="w3-bar-item w3-button w3-hover-blue">About</li>
+  <li href="#skill" class="w3-bar-item w3-button w3-hover-blue">Skills</li>
+  <li href="#" class="w3-bar-item w3-button w3-hover-blue">Works</li>
+  <li href="#contact" class="w3-bar-item w3-button w3-hover-blue">Contact</li>
   </div>
   
 
@@ -355,7 +355,7 @@ function scrollFunction() {
   $('body').scrollspy({target: ".navigation", offset: 50});
 
 // Add smooth scrolling on all links inside the navbar
-$("#navbar a").on('click', function(event) {
+$("#navbar li").on('click', function(event) {
 
   // Make sure this.hash has a value before overriding default behavior
   if (this.hash !== "") {
